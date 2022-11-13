@@ -5,6 +5,8 @@ import Movies from "./Movies";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import * as constants from "./constants";
+
 class Catalog extends Component {
     constructor() {
         super();
@@ -59,7 +61,7 @@ class Catalog extends Component {
                     <Row className="m-4">
                         <div>
                             <h2 className="d-flex justify-content-start">
-                                Rented
+                                {constants.Rented}
                             </h2>
                             <Movies
                                 userId={this.props.userId}
@@ -72,7 +74,7 @@ class Catalog extends Component {
                 ) : null}
                 <Row className="m-4">
                     <h2 className="d-flex justify-content-start ml-4">
-                        Catalog
+                        {constants.Catalog}
                     </h2>
                     <Movies
                         userId={this.props.userId}
