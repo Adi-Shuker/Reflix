@@ -13,14 +13,9 @@ class Search extends Component {
             return this.props.movies;
         }
         return this.props.movies.filter((movie) => {
-            return (
-                movie.title
-                    .toLowerCase()
-                    .includes(this.state.searchField.toLowerCase()) ||
-                movie.title
-                    .toLowerCase()
-                    .includes(this.state.searchField.toLowerCase())
-            );
+            return movie.title
+                .toLowerCase()
+                .includes(this.state.searchField.toLowerCase());
         });
     };
     handleChange = (e) => {
